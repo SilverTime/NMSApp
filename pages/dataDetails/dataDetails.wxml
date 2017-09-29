@@ -1,0 +1,35 @@
+<view wx:if="{{webId!=0}}" class="container">
+  <view class="dd_title">
+   {{dataDetail.webTitle}}
+  </view>
+  <view class="dd_wrap">
+    <view class="small_info">
+      <text>作者:{{dataDetail.webAuthor}}</text>
+      <text>来源:{{dataDetail.webSiteName}}</text>
+      <text>主题:{{dataDetail.webTopicName}}</text>  
+    </view>
+    <view class="dd_time">时间:{{dataDetail.webPubDate}}</view>
+
+    <view class="dd_main">
+      {{dataDetail.webContent}}
+    </view>
+  </view>
+</view>
+
+<view wx:elif="{{collectId!=0}}" class="container">
+  <view class="dd_title">
+   {{dataCollectDetail.collectTitle}}
+  </view>
+  <view class="dd_wrap">
+    <view class="small_info">
+      <text>作者:{{dataCollectDetail.collectAuthor}}</text>
+      <text>来源:{{dataCollectDetail.collectSite}}</text>
+      <view class="dd_collect_time">时间:{{dataCollectDetail.collectPubDate}}</view>
+    </view>
+    
+
+    <view class="dd_main">
+      {{dataCollectDetail.collectContent}}
+    </view>
+  </view>
+</view>

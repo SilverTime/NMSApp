@@ -1,0 +1,58 @@
+{
+  "pages": [
+
+    "pages/choosePage/choosePage",
+    "pages/bindWeixin/bindWeixin",
+    "pages/index/index",
+    "pages/personal/personal",
+    "pages/weekly/weekly",
+    "pages/abstractList/abstractList",
+    "pages/addWeekly/addWeekly",
+    "pages/dataList/dataList",
+    "pages/subjectList/subjectList",
+    "pages/collection/collection",
+    "pages/webManage/webManage",
+    "pages/dataDetails/dataDetails",
+    "pages/drawData/drawData",
+    "pages/addSubject/addSubject",
+    "pages/logs/logs",
+    "pages/addWebsite/addWebsite",
+    "pages/createAbstract/createAbstract",
+    "pages/test/test"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "互联网舆情监测系统",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/dataList/dataList",
+        "text": "首页",
+        "iconPath": "images/首页.png",
+        "selectedIconPath": "images/首页_d.png"
+      },
+      {
+        "pagePath": "pages/drawData/drawData",
+        "text": "统计",
+        "iconPath": "images/统计.png",
+        "selectedIconPath": "images/统计_d.png"
+      },
+      {
+        "pagePath": "pages/collection/collection",
+        "text": "收藏",
+        "iconPath": "images/收藏.png",
+        "selectedIconPath": "images/收藏_d.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "我的",
+        "iconPath": "images/我的.png",
+        "selectedIconPath": "images/我的_d.png"
+      }
+    ]
+  }
+}

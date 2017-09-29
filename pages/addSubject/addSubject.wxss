@@ -1,0 +1,89 @@
+/* addSubject.wxss */
+
+.aw_title {
+  text-align: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.aw_title text {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.ipt_box {
+  margin-bottom: 10px;
+}
+
+.ipt_box label {
+  font-family: '黑体';
+}
+
+.ipt_box .small {
+  font-size: 12px;
+  color: #900;
+}
+
+.ipt {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 10px;
+  margin: 5px 0;
+}
+.ipt_t{
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  min-height: 64px;
+  padding: 0 10px;
+  margin: 5px 0;
+}
+.ipt_t textarea{
+/* width: 100%;
+height:100%; */
+}
+.attention_box text{
+  font-size: 12px;
+  color: #444;
+
+}
+.attention{
+  height: 24px;
+  width: 40px;
+  line-height: 24px;
+  text-align: center;
+  background: #23c6c8;
+  color: #fff;
+  border:1px solid #21c6c8;
+  border-radius: 5px;
+  font-size: 12px;
+  display: inline-block;
+  margin-right:5px;
+}
+
+.ipt input {
+  height: 100%;
+  line-height: 100%;
+}
+
+.save_box{
+  margin: 20px 0;
+  border-top: 1px solid #ddd;
+  padding: 20px 0;
+}
+.save_box button{
+  font-size: 14px;
+  width: 60px;
+  margin-left: 5px;
+  float:right;
+}
+button.save{
+  color: #fff;
+  background: #1ab394;
+}
+.save_box form{
+
+}

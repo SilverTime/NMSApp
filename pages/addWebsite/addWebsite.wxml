@@ -1,0 +1,107 @@
+<!--addWebsite.wxml-->
+<view class="container" style='padding:10px;'>
+  <view class="ipt_box">
+    <label>网站名称
+      <text class="small">(*必填)</text>
+    </label>
+    <view class="ipt">
+      <input type="text" placeholder="网站名称" value="{{dataDetail.siteName}}" bindinput="inputSiteName"/>
+    </view>
+  </view>
+
+  <view class="ipt_box">
+    <label>网址
+      <text class="small">(*必填)</text>
+    </label>
+    <view class="ipt">
+      <input type="text" placeholder="网址" value="{{dataDetail.siteURL}}" bindinput="inputSiteURL"/>
+    </view>
+  </view>
+
+  <view class="section">
+    <text>网站类型：</text>
+    <picker class="picker" bindchange="inputPickerSiteType" value="{{siteType}}" range="{{typeArr}}">
+      <view class="p_text">
+        {{typeArr[siteType-1]}}
+        <image class="pull_icon" src="../../images/PullUp.png"></image>
+      </view>
+    </picker>
+  </view>
+  <view class="ipt_box">
+    <label>发布时间抽取规则</label>
+    <view class="ipt">
+      <input type="text" placeholder="发布时间抽取规则" value="{{dataDetail.sitePublicTimeTarget}}" bindinput="inputSitePublicTimeTarget"/>
+    </view>
+  </view>
+
+  <view class="ipt_box">
+    <label>正文抽取规则</label>
+    <view class="ipt">
+      <input type="text" placeholder="正文抽取规则" value="{{dataDetail.siteContentTarget}}" bindinput="inputSiteContentTarget"/>
+    </view>
+  </view>
+
+  <view class="ipt_box">
+    <label>标题抽取规则</label>
+    <view class="ipt">
+      <input type="text" placeholder="标题抽取规则" value="{{dataDetail.siteTitleTarget}}" bindinput="inputSiteTitleTarget"/>
+    </view>
+  </view>
+
+    <view class="ipt_box">
+    <label>作者抽取规则</label>
+    <view class="ipt">
+      <input type="text" placeholder="作者抽取规则" value="{{dataDetail.siteAuthorTarget}}" bindinput="inputSiteAuthorTarget"/>
+    </view>
+  </view>
+
+  <view class="section">
+    <text> 网站编码：</text>
+    <picker class="picker" bindchange="inputPickerCode" value="{{codeArr[codeIndex]}}" range="{{codeArr}}">
+      <view class="p_text">
+        {{code}}
+        <image class="pull_icon" src="../../images/PullUp.png"></image>
+      </view>
+    </picker>
+  </view>
+  <view class="ipt_box">
+    <label>URL列表抽取规则</label>
+    <view class="ipt">
+      <input type="text" placeholder="URL列表抽取规则" value="{{dataDetail.siteListTarget}}" bindinput="inputSiteListTarget"/>
+    </view>
+  </view>
+
+  <view class="ipt_box">
+    <label>URL抽取正则表达式</label>
+    <view class="ipt">
+      <input type="text" placeholder="URL抽取正则表达式" value="{{dataDetail.siteURLFilter}}" bindinput="inputSiteURLFilter"/>
+    </view>
+  </view>
+
+  <checkbox-group bindchange="checkboxChange">
+    <label class="checkbox" wx:if="{{crawlEnable == 1}}" wx:key="{{index}}" wx:for-items="{{checkBox}}">
+        <checkbox value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
+    </label>
+    <label wx:if="{{crawlEnable == 0}}" class="checkbox" wx:key="{{index}}" wx:for-items="{{checkBox}}">
+        <checkbox value="{{item.value}}" checked=""/>{{item.name}}
+    </label>
+    
+  </checkbox-group>
+
+  <view class="section">
+    <text>采集器：</text>
+    <picker class="picker" bindchange="inputPickerCrawler" value="{{pickerIndex}}" range="{{pickerArr}}">
+      <view class="p_text">
+        {{pickerArr[pickerIndex]}}
+        <image class="pull_icon" src="../../images/PullUp.png"></image>
+      </view>
+    </picker>
+  </view>
+
+    <view class="save_box">
+    <form class="">
+      <button bindtap="sameWebsite" class="save">保存</button>
+    </form>
+  </view>
+
+</view>

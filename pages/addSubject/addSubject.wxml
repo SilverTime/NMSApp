@@ -1,0 +1,39 @@
+<!--addSubject.wxml-->
+<view class="container" style='padding:10px;'>
+  <view class="ipt_box">
+    <label>主题名称
+      <text class="small">(*必填)</text>
+    </label>
+    <view class="ipt">
+      <input type="text" placeholder="主题名称" value="{{dataDetail.topicName}}" bindinput="inputTopicName"/>
+    </view>
+  </view>
+
+  <view class="ipt_box">
+    <label>必包含的关键词
+      <text class="small">(*必填)</text>
+    </label>
+    <view class="ipt_t">
+      <textarea maxlength='140' type="text" value="{{dataDetail.inWords}}" placeholder="必包含的关键词，多个用','分开" bindinput="inputInWords" />
+    </view>
+  </view>
+  <view class="ipt_box">
+    <label>拓展关键词
+    </label>
+    <view class="ipt_t">
+      <textarea maxlength='140' type="text" value="{{dataDetail.exWords}}" placeholder="拓展关键词，多个用','分开" bindinput="inputExWords" />
+    </view>
+  </view>
+
+  <view class="attention_box">
+    <view class="attention">注意</view>
+    <text>如添加必须的关键词，如“西南科技大学，计算机学院”，可扩展关键词“知识工程，网络舆情”，系统将按照“西南科技大学 AND 计算机学院 AND (知识工程OR 网络舆情)”的表达式进行查询</text>
+
+  </view>
+
+  <view class="save_box">
+    <form class="">
+      <button bindtap="sameSubject" class="save">保存</button>
+    </form>
+  </view>
+</view>

@@ -1,0 +1,61 @@
+<scroll-view style="height: 100%;" scroll-y="true" scroll-top="{{scrollTop.scroll_top}}" bindscroll="scrollTopFun">  
+<view>
+  <view class="search_wrap">
+    <view class="search_box">
+      <view class="title_search">
+        <input type="text" placeholder="请输入标题" confirm-type='done' name="searchKeyword" bindinput="bindKeywordInput" value="{{searchKeyword}}" />
+      </view>
+
+      <view class="section">
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+          <view class="picker">
+            {{array[index]}}
+            <image class="pull_icon" src="../../images/PullUp.png"></image>
+          </view>
+        </picker>
+      </view>
+    </view>
+
+    <button bindtap="keywordSearch" class="btn_search">检索</button>
+  </view>
+
+
+
+  <view class="container" style='padding:0'>
+    <view class="table">
+      <view class="tr">
+        <view class="th">标题</view>
+        <view class="th">发布时间</view>
+        <view class="th">情感</view>
+        <view class="th">来源</view>
+      </view>
+      <!-- <view class="tr" wx:for="{{info}}">
+        <view class="td">{{item.webTitle}}</view>
+        <view class="td">{{item.webPubDate}}</view>
+        <view class="td">{{item.webSenMessage}}</view>
+        <view class="td">{{item.webSiteName}}</view>
+      </view> -->
+
+      <view  wx:for="{{list}}"  wx:key="{{index}}"  class="item">  
+    <view bindtap = "detailData" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-index="{{index}}" style="{{item.txtStyle}}" class="inner txt"> 
+            <view class="td" data-webid="{{item.webId}}">{{item.webTitle}}</view>
+            <view class="td" data-webid="{{item.webId}}">{{item.webPubDate}}</view>
+            <view class="td" data-webid="{{item.webId}}">{{item.webSenMessage}}</view>
+            <view class="td" data-webid="{{item.webId}}">{{item.webSiteName}}</view>
+          </view>  
+          <picker mode="selector" range="{{arrayAbstract}}" value="{{arrayAbstractNum}}" data-abwebid="{{item.webId}}" bindchange="addWeekly"><view data-index="{{index}}" bindtap = "addWeekly" class="inner addWeekly"><view data-index="{{index}}" bindtap = "addWeekly" data-abwebid="{{item.webId}}"style="margin-top:25%;">加入周报</view></view></picker>
+          <view wx:if="{{item.webIsCollect == 0}}" data-id="{{item.webId}}" data-collect="{{item.webIsCollect}}" bindtap = "delItem" class="inner edit"><view data-id="{{item.webId}}" data-collect="{{item.webIsCollect}}" bindtap = "delItem" style="margin-top:25%;">收藏</view></view>  
+          <view wx:elif="{{item.webIsCollect == 1}}" data-id="{{item.webId}}" data-collect="{{item.webIsCollect}}" bindtap = "delItem" class="inner del"><view data-id="{{item.webId}}" data-collect="{{item.webIsCollect}}" bindtap = "delItem" style="margin-top:25%;">取消收藏</view></view>  
+     </view>  
+    </view>
+  </view>
+
+  <view style="width:100%;height:35px;font-size:14px;" wx:if="{{scrollTop.goTop_show}}" catchtap="goTopFun">
+    <view style="width:80%;margin:10px auto;height:100%;display:flex;justify-content: space-between;">
+    <button bindtap="lastPage" style="height:100%;line-height:35px;text-align:center;background: #1ab394;color: #fff;">上一页</button>
+    <view style="height:100%;line-height:35px;text-align:center"> No.{{currentPage + 1}}</view>
+    <button bindtap="nextPage" style="height:100%;line-height:35px;text-align:center;background: #1ab394;color: #fff;">下一页</button>
+    </view>
+  </view>
+</view>
+</scroll-view>

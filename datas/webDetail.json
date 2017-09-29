@@ -1,0 +1,24 @@
+{
+  "ret": true,
+  "errcode": 0,
+  "errmsg": "",
+  "ver": 1,
+  "data": {
+    "result": {
+      "siteId": 0,
+      "siteName": "腾讯教育",
+      "siteURL": "http://edu.qq.com/",
+      "sitePublicTimeTarget": "//*[@id=\"C-Main-Article-QQ\"]/div[1]/div[1]/div[1]",
+      "siteContentTarget": "//*[@id=\"Cnt-Main-Article-QQ\"]",
+      "siteTitleTarget": "//*[@id=\"C-Main-Article-QQ\"]/div[1]/h1",
+      "siteListTarget": "//*[@id=\"page1\"]/div",
+      "code": "GB2312",
+      "crawlerId": 1,
+      "crawlEnable": 1,
+      "siteURLFilter": "^/a/\\d+/\\d+\\.htm$",
+      "siteType": 1,
+      "sectionTotal": 0,
+      "siteCount": 0
+    }
+  }
+}

@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">欢迎来到网络舆情监测系统，请先绑定系统账号</text>
+  </view>
+  <image class="userinfo-username" src="{{userInfo.username}}" background-size="cover"></image>
+  <view class="inputusername">
+        <input type="text" placeholder="请输入用户名或者邮箱" bindinput="usernameInput" value="{{inputusername}}" />
+  </view>
+  <image class="userinfo-password" src="{{userInfo.password}}" background-size="cover"></image>
+  <view class="inputpassword">
+        <input type="text" placeholder="请输入密码" bindinput="passwordInput" password="true" value="{{inputpassword}}" />
+  </view>
+  <view class="message">
+    <text>{{message}}</text>
+  </view>
+  <button bindtap="login" class="btn_login">确认绑定</button>
+</view>

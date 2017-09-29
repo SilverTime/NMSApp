@@ -1,0 +1,76 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20rpx;
+  color: red;
+}
+.userinfo-avatar {
+  width: 500rpx;
+  height: 180rpx;
+  margin: 70rpx;
+  /* border-radius: 50%; */
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.inputusername {
+  border: 2px solid #ddd;
+  border-radius: 5px 0 0 5px;
+  margin-top: -35px;
+  margin-left: 15%;
+  width: 70%;
+  box-sizing: border-box;
+  height: 40px;
+  line-height: 32px;
+  padding: 0 50px;
+}
+.inputusername input{
+  height: 100%;
+  line-height: 100%;
+}
+
+.userinfo-username{
+  width: 50rpx;
+  height: 40rpx;
+  margin-left: 140rpx;
+  margin-top: 60rpx;
+}
+.inputpassword {
+  border: 2px solid #ddd;
+  border-radius: 5px 0 0 5px;
+  margin-top: -34px; 
+  margin-left: 15%;
+  width: 70%;
+  box-sizing: border-box;
+  height: 40px;
+  line-height: 32px;
+  padding: 0 50px;
+}
+.inputpassword input{
+  height: 100%;
+  line-height: 100%;
+}
+.userinfo-password{
+  width: 50rpx;
+  height: 40rpx;
+  margin-left: 140rpx;
+  margin-top: 50rpx;
+}
+.btn_login {
+  height: 32px;
+  line-height: 32px;
+  margin-top: 40rpx;
+  margin-left:35%; 
+  width: 25%;
+  background: #1ab394;
+  color: #fff;
+}

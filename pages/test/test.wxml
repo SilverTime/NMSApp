@@ -1,0 +1,11 @@
+<view animation="{{animationData}}" class="un_drawer_box" wx:if="{{showModalStatus}}"> 
+  <view class="un_drawer_title">请输入即将解除的系统账号的密码</view> 
+  <view class="un_drawer_content"> 
+    <view class="un_top un_grid"> 
+      <label class="un_title un_col-0">密码</label> 
+      <input class="un_input_base un_input_h30 un_col-1" placeholder="请输入密码" bindinput="passwordInput" password="true" value="{{inputpassword}}"></input> 
+    </view> 
+  </view> 
+  <view class="un_btn_cancel" bindtap="cancel" data-statu="close">取消解绑</view> 
+  <view class="un_btn_ok" bindtap="unBind" data-statu="close">确认解绑</view> 
+</view>

@@ -1,0 +1,33 @@
+{
+  "ret": true,
+  "errcode": 0,
+  "errmsg": "",
+  "ver": 1,
+  "data": {
+    "totalPage": 1,
+    "pageData": [
+      {
+        "page": 1,
+        "data": [
+          {
+            "topicId": 2,
+            "topicName": "领导",
+            "topicAtte": 0,
+            "inWords": "西南科技大学",
+            "exWords": "书记，校长，处长，领导",
+            "userId": 1
+          },
+          {
+            "topicId": 68,
+            "topicName": "学院",
+            "topicAtte": 0,
+            "inWords": "西南科技大学",
+            "exWords": "学院",
+            "userId": 1
+          }
+        ]
+      }
+    ],
+    "totalCount": 2
+  }
+}

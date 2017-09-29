@@ -1,0 +1,35 @@
+<scroll-view style="height: 100%;" scroll-y="true" scroll-top="{{scrollTop.scroll_top}}" bindscroll="scrollTopFun">  
+<view>
+  <view class="search_wrap">
+    <button bindtap="createAbstract" class="btn_search">生成文摘</button>
+  </view>
+  <view class="container" style='padding:0'>
+    <view class="table">
+      <view class="tr">
+        <view class="th">标题</view>
+        <view class="th">发布时间</view>
+        <view class="th">情感</view>
+        <view class="th">来源</view>
+      </view>
+      <view  wx:for="{{list}}"  wx:key="{{index}}"  class="item">  
+    <view bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-index="{{index}}" style="{{item.txtStyle}}" class="inner txt"> 
+            <view class="td" >{{item.abstractTitle}}</view>
+            <view class="td" >{{item.abstractPubDate}}</view>
+            <view class="td" >{{item.abstractMessage}}</view>
+            <view class="td" >{{item.abstractSite}}</view>
+          </view>  
+          <view  data-id="{{item.abstractId}}" bindtap = "delItem" class="inner del"><view data-id="{{item.abstractId}}" bindtap = "delItem" style="margin-top:25%;">删除</view></view>  
+     </view>  
+    </view>
+  </view>
+
+  <view style="width:100%;height:35px;font-size:14px;" wx:if="{{scrollTop.goTop_show}}" catchtap="goTopFun">
+    <view style="width:80%;margin:10px auto;height:100%;display:flex;justify-content: space-between;">
+    <button bindtap="lastPage" style="height:100%;line-height:35px;text-align:center;background: #1ab394;color: #fff;">上一页</button>
+    <view style="height:100%;line-height:35px;text-align:center"> No.{{currentPage + 1}}</view>
+    <button bindtap="nextPage" style="height:100%;line-height:35px;text-align:center;background: #1ab394;color: #fff;">下一页</button>
+    </view>
+  </view>
+  
+</view>
+</scroll-view>

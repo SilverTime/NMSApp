@@ -1,0 +1,260 @@
+/* webManage.wxss */
+page {
+  font-size: 14px;
+  color: #333;
+  height: 100%;
+}
+
+.search_wrap {
+  margin: 10px 10px 20px 10px;
+  overflow: hidden;
+}
+
+.search_box {
+  width: 54%;
+  margin-right: 5px;
+  float: left;
+}
+
+.search_box picker {
+  float: left;
+  border: 1px solid #ddd;
+  width: 98%;
+  height: 30px;
+  border-radius: 0 5px 5px 0;
+  text-align: center;
+  line-height: 30px;
+  border-left: none;
+  position: relative;
+}
+
+
+.search_box .title_search {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  float: left;
+  width: 100%;
+  box-sizing: border-box;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 10px;
+}
+
+.title_search input{
+  height: 100%;
+  line-height: 100%;
+}
+.btn_search {
+  height: 32px;
+  line-height: 32px;
+  float: left;
+  width: 14%;
+  background: #1ab394;
+  color: #fff;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+}
+.btn_search:not(:last-child){
+  margin-right: 20px;
+}
+
+
+.pull_icon {
+position:absolute;
+right:14px;
+top:9px;
+width:10px;
+height:10px;
+
+}
+
+.table {
+  border: 1px solid #dadada;
+  border-right: 0;
+  border-bottom: 0;
+  width: 100%;
+}
+
+.tr {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.th, .td {
+  padding: 10px;
+  border-bottom: 1px solid #dadada;
+  border-right: 1px solid #dadada;
+  text-align: center;
+  width: 100%;
+  /* overflow:hidden;  
+  text-overflow:ellipsis;   
+  white-space: nowrap;    */
+}
+
+.th {
+  font-weight: 400;
+  background-color: #dadada;
+}
+
+/*dgfg*/
+
+/*搜索*/
+
+.search {
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+.search-bar {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx;
+  background: #f4f4f4;
+}
+
+.search-wrap {
+  position: relative;
+  flex: auto;
+  display: flex;
+  align-items: center;
+  height: 80rpx;
+  padding: 0 20rpx;
+  background: #fff;
+  border-radius: 6rpx;
+}
+
+.search-wrap .icon-search {
+  margin-right: 10rpx;
+}
+
+.search-wrap .search-input {
+  flex: auto;
+  font-size: 28rpx;
+}
+
+.search-cancel {
+  padding: 0 20rpx;
+  font-size: 28rpx;
+}
+
+/*搜索结果*/
+
+.search-result {
+  flex: auto;
+  position: relative;
+}
+
+.search-result scroll-view {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.result-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx 0 20rpx 110rpx;
+  overflow: hidden;
+  border-bottom: 2rpx solid #e5e5e5;
+}
+
+.result-item .media {
+  position: absolute;
+  left: 16rpx;
+  top: 16rpx;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 999rpx;
+}
+
+.result-item .title, .result-item .subtitle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 36rpx;
+}
+
+.result-item .title {
+  margin-bottom: 4rpx;
+  color: #000;
+}
+
+.result-item .subtitle {
+  color: #808080;
+  font-size: 24rpx;
+}
+
+.result-item:first-child .subtitle text {
+  margin-right: 20rpx;
+}
+
+.result-item:not(:first-child) .subtitle text:not(:first-child):before {
+  content: '/';
+  margin: 0 8rpx;
+}
+
+.loading {
+  padding: 10rpx;
+  text-align: center;
+}
+
+.loading:before {
+  display: inline-block;
+  margin-right: 5rpx;
+  vertical-align: middle;
+  content: '';
+  width: 40rpx;
+  height: 40rpx;
+  /*background: url(../../images/icon-loading.png) no-repeat;*/
+  background-size: contain;
+  animation: rotate 1s linear infinite;
+}
+
+.loading.complete:before {
+  display: none;
+}
+
+
+view{  
+    box-sizing: border-box;  
+}  
+
+.item{  
+    position: relative;  
+    border-top: 2rpx solid #eee;  
+    min-height: 110rpx;  
+    overflow: hidden;  
+}  
+
+.inner{  
+    position: absolute;  
+    min-height: 110rpx;   
+}  
+.inner.txt{  
+    background-color: #fff;  
+    display: flex;
+    justify-content: space-between;
+    z-index: 5;  
+    padding:0 0rpx;  
+    transition: left 0.2s ease-in-out;  
+    width: 100%;  
+
+
+}  
+.inner.del{  
+    background-color: #e64340;  
+    width: 190rpx;text-align: center;  
+    z-index: 4;  
+    right: 0;  
+    color: #fff  
+}  

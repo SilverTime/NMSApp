@@ -1,0 +1,53 @@
+/* dataDetails.wxss */
+
+page {
+  font-size: 14px;
+  color: #333;
+  line-height:1.5;
+
+}
+
+.small_info {
+  margin: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.dd_wrap {
+  overflow: hidden;
+  padding: 10px;
+}
+.dd_title {
+  text-align:center;
+  font-size: 36rpx;
+  margin-top:25rpx;
+  font-weight:bold;
+}
+.small_info{
+  padding: 10px 0;
+
+}
+.dd_time{
+  height: 15px;
+    border-bottom: 1px dotted #ddd;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.dd_collect_time{
+  height: 15px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.dd_title text {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.dd_main {
+  padding: 10px;
+  text-indent: 28px;
+}
+

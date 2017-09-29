@@ -1,0 +1,23 @@
+<!--addWebsite.wxml-->
+<view class="container" style='padding:10px;'>
+  <view class="ipt_box">
+    <label>文摘名称
+      <text class="small">(*必填)</text>
+    </label>
+    <view class="ipt">
+      <input type="text" placeholder="请输入文摘名称" value="{{dataDetail.siteName}}" bindinput="inputSiteName"/>
+    </view>
+  </view>
+  <view class="timeSelect">
+      <picker mode="date" value="{{abstractcEndtime}}" start="1999-01-01" end="2999-12-12" bindchange="datePickerBindchangeB">
+        {{abstractcEndtime}}
+      </picker>
+  </view>
+
+    <view class="save_box">
+    <form class="">
+      <button bindtap="sameWebsite" class="save">保存</button>
+    </form>
+  </view>
+
+</view>

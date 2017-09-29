@@ -1,0 +1,36 @@
+<view>
+  <view class="search_wrap">
+    <view class="search_box">
+      <view class="timeSelect">
+        <picker mode="date" value="{{dateValueB}}" start="1999-01-01" end="2999-12-12" bindchange="datePickerBindchangeB">
+          {{dateValueB}}
+        </picker>
+        <picker mode="date" value="{{dateValueE}}" start="1999-01-01" end="2999-12-12" bindchange="datePickerBindchangeE">
+          {{dateValueE}}
+        </picker>
+      </view>
+
+      <view class="section">
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+          <view class="picker">
+            {{array[index]}}
+            <image class="pull_icon" src="../../images/PullUp.png"></image>
+          </view>
+        </picker>
+      </view>
+    </view>
+
+    <button bindtap="keywordSearch" class="btn_search">查询</button>
+  </view>
+    <text style="margin-left:15px;">舆情量：{{sentimentNum}}</text>
+    <text style="margin-left:15px;">主题量：{{topicNum}}</text>
+    <text style="margin-left:15px;">负面舆情量：{{NEsentimentNum}}</text>
+    <text style="margin-left:15px;">网站量：{{webNum}}</text>
+
+
+  <view class="container" style='padding:0'>
+  <view class="draw">
+   <canvas canvas-id="Canvas" class="canvas" style="height:300px;width:100%;margin-top:50px;" bindtouchstart="touchHandler"></canvas>
+  </view>
+  </view>
+</view>

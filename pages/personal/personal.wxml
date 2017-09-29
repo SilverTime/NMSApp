@@ -1,0 +1,48 @@
+<view class="container">
+
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+
+  <view class="person-list">
+    <view bindtap="subject" class="list-item">
+      <image class="item-image" src="../../images/主题.png"></image>
+      <text class="item-text">主题管理</text>
+    </view>
+    <view class="person-line"></view>
+
+    <view bindtap="weekly" class="list-item">
+      <image class="item-image" src="../../images/周报.png"></image>
+      <text class="item-text">周报管理</text>
+    </view>
+    <view class="person-line"></view>
+
+    <view bindtap="website" class="list-item">
+      <image class="item-image" src="../../images/网站.png"></image>
+      <text class="item-text">网站管理</text>
+    </view>
+    <view class="person-line"></view>
+
+    <view bindtap="unBind" class="list-item">
+      <image class="item-image" src="../../images/解绑.png"></image>
+      <text class="item-text">解绑账号</text>
+    </view>
+    <view class="person-line"></view>
+    
+  </view>
+
+  <view animation="{{animationData}}" class="un_drawer_box" wx:if="{{showModalStatus}}"> 
+  <view class="un_drawer_title">请输入即将解除的系统账号的密码</view> 
+  <view class="un_drawer_content"> 
+    <view class="un_top un_grid"> 
+      <label class="un_title un_col-0">密码</label> 
+      <input class="un_input_base un_input_h30 un_col-1" placeholder="请输入密码" bindinput="passwordInput" password="true" value="{{inputpassword}}"></input> 
+    </view> 
+  </view> 
+  <view class="un_btn_cancel" bindtap="cancel" data-statu="close">取消解绑</view> 
+  <view class="un_btn_ok" bindtap="sure" data-statu="close">确认解绑</view> 
+</view>
+
+  <view class="separate"></view>
+</view>
